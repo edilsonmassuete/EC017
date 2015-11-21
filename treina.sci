@@ -140,7 +140,8 @@ NeuralNetwork = [21 14 7];
 //Criando rede inicial
 W = ann_FF_init(NeuralNetwork);
 
-//disp(W);
+disp(".::::::::::::: PESOS INICIAIS :::::::::::::.");
+disp(W);
 
 //===============Treinando a rede===========
 //Taxa de aprendizagem e limiar do erro
@@ -152,6 +153,8 @@ epochs = 3000;
 //treinando
 W = ann_FF_Std_batch(x,d,NeuralNetwork,W,lp,epochs);
 
+disp(".::::::::::::: PESOS ATUALIZADOS :::::::::::::.");
+disp(W);
 
 save('ANN_treina.sod', 'W', 'NeuralNetwork');// armazena todos os valores do treinamento
 
